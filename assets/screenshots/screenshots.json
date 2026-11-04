@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "4a20c763a48bd4f5a34a84c002fd9858e9793f65",
+  "license": "CC-BY-4.0",
+  "originals": {
+    "field": {
+      "path": "originals/projects-v2--new-field-button.png",
+      "sourcePath": "projects-v2/new-field-button.png",
+      "sourceUrl": "https://raw.githubusercontent.com/github/docs/4a20c763a48bd4f5a34a84c002fd9858e9793f65/assets/images/help/projects-v2/new-field-button.png",
+      "sha256": "2912cd5b0868564a7139771b83313d87a1787b928574d17f0a917e011b7630d8",
+      "width": 494,
+      "height": 252,
+      "caption": "Rightmost column header + → New field"
+    },
+    "iteration": {
+      "path": "originals/projects-v2--add-iteration-options.png",
+      "sourcePath": "projects-v2/add-iteration-options.png",
+      "sourceUrl": "https://raw.githubusercontent.com/github/docs/4a20c763a48bd4f5a34a84c002fd9858e9793f65/assets/images/help/projects-v2/add-iteration-options.png",
+      "sha256": "9b5a16fa5b081755a14fdd5c7bc48c0eff3ac57e0cc2a9436c8891abbf0060a9",
+      "width": 660,
+      "height": 484,
+      "caption": "Iteration settings; creation and assignment are described in the text"
+    },
+    "issue": {
+      "path": "originals/issues--create-a-branch.png",
+      "sourcePath": "issues/create-a-branch.png",
+      "sourceUrl": "https://raw.githubusercontent.com/github/docs/4a20c763a48bd4f5a34a84c002fd9858e9793f65/assets/images/help/issues/create-a-branch.png",
+      "sha256": "2625494ee2d75d0facee8981d61ae75b0feee643894c21d910b68222d11eddce",
+      "width": 706,
+      "height": 840,
+      "caption": "Real issue sidebar orientation: use YOUR issue, not this example"
+    },
+    "pr": {
+      "path": "originals/pull_requests--pull-request-compare-pull-request.png",
+      "sourcePath": "pull_requests/pull-request-compare-pull-request.png",
+      "sourceUrl": "https://raw.githubusercontent.com/github/docs/4a20c763a48bd4f5a34a84c002fd9858e9793f65/assets/images/help/pull_requests/pull-request-compare-pull-request.png",
+      "sha256": "3e0ccbaaa19c2ee045c904e76d4ff9f4728e89e63708b2a1230120a9efcc64af",
+      "width": 1824,
+      "height": 162,
+      "caption": "After your push: Compare & pull request"
+    },
+    "merge": {
+      "path": "originals/pull_requests--merge-pull-request-options.png",
+      "sourcePath": "pull_requests/merge-pull-request-options.png",
+      "sourceUrl": "https://raw.githubusercontent.com/github/docs/4a20c763a48bd4f5a34a84c002fd9858e9793f65/assets/images/help/pull_requests/merge-pull-request-options.png",
+      "sha256": "7041beb035e38f2e654467b54554c2d809625042cc51e030eceea8636e9c3d26",
+      "width": 934,
+      "height": 576,
+      "caption": "Inspect files/checks → Merge pull request → confirm"
+    },
+    "board": {
+      "path": "originals/projects-v2--example-board.png",
+      "sourcePath": "projects-v2/example-board.png",
+      "sourceUrl": "https://raw.githubusercontent.com/github/docs/4a20c763a48bd4f5a34a84c002fd9858e9793f65/assets/images/help/projects-v2/example-board.png",
+      "sha256": "783dfa0f8b8ea8d6f6de470a3950ac25b87f5d9dd52f74832430db0a3bcd74cf",
+      "width": 2880,
+      "height": 1352,
+      "caption": "Board columns show Status; move YOUR implementation card"
+    }
+  },
+  "sheets": [
+    {
+      "id": "2-1",
+      "path": "lab-2-step-1.png",
+      "title": "Plan your sprint",
+      "panels": [
+        "field",
+        "iteration"
+      ],
+      "sha256": "eb222fcc2fb0b1a3561c99674fc8e3c57f34a735f66b1a9dd56b59b69731c296",
+      "width": 1440,
+      "height": 877
+    },
+    {
+      "id": "2-2",
+      "path": "lab-2-step-2.png",
+      "title": "Show a native dependency",
+      "panels": [
+        "issue"
+      ],
+      "sha256": "828e5b315acf74ffeec4be660e7f609dfac8236a7e64335cd900a4ce5b762c23",
+      "width": 1440,
+      "height": 877
+    },
+    {
+      "id": "2-3",
+      "path": "lab-2-step-3.png",
+      "title": "Create a linked pull request",
+      "panels": [
+        "issue",
+        "pr"
+      ],
+      "sha256": "e7a92b2dec94922786cc5faea8eb86f9ccb7bf4a6e78391e4a068e4f11350436",
+      "width": 1440,
+      "height": 877
+    },
+    {
+      "id": "2-4",
+      "path": "lab-2-step-4.png",
+      "title": "Complete and carry over",
+      "panels": [
+        "merge",
+        "board"
+      ],
+      "sha256": "18719c351bc516334de6b73edce27650b533425ee120f318451e7167173b3fad",
+      "width": 1440,
+      "height": 866
+    }
+  ]
+}
