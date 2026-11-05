@@ -10,7 +10,7 @@
 - **What will you learn?** Sprint planning, native issue dependencies, a small local Git change, PR traceability, completion automation and carry-over.
 - **What will you build?** A Sprint 1 plan and a real, one-file checklist PR, with unfinished verification retained for Sprint 2.
 - **How long?** **35 minutes**, across the four steps below: 8 + 7 + 12 + 8.
-- **Prerequisites:** your existing private Lab 1 repository, its local clone, its Mona exercise and the same private Project. Keep the five Backlog issues, numeric Effort values (implementation 3, verification 2), and the verification task unassigned. Use Git, PowerShell and VS Code or another editor, with your normal Git authentication. No personal access token, participant Node/npm, GitHub CLI, instructor account or paid add-on is required.
+- **Prerequisites:** your existing private Lab 1 repository, its local clone, its **single Mona instruction thread** and the same private Project. Keep the five work issues you created in Lab 1, with the four role numbers registered through `/backlog`; these are work items, not extra Mona instruction issues. Keep numeric Effort values (implementation 3, verification 2) and the verification task unassigned. Use Git, PowerShell and VS Code or another editor, with your normal Git authentication. No personal access token, participant Node/npm, GitHub CLI, instructor account or paid add-on is required.
 
 There are **three published repositories**, but each participant uses **one private repository and one private Project** for all three labs. Only Lab 1 is a starter. This companion has no Mona workflow, bootstrap or learner initialization.
 
