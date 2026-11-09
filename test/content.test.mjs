@@ -52,6 +52,7 @@ unit('manual-run setup names real field controls, iteration dates and effort tot
   for (const text of [
     "that organization's Projects tab",
     'separate browser tabs',
+    'Add issue fields \u2192 Create a project field',
     'Create a project field',
     'Starts on',
     'displayed start/end dates',
