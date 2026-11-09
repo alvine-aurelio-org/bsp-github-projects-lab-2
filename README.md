@@ -26,7 +26,7 @@ All participation uses the GitHub website in your browser.
 
 **Do — standalone setup, after your private copy and Mona exercise exist:**
 
-1. Open your profile → **Your projects → New project → Table**. Name the Project, keep its visibility **Private** in Project settings, and use the **same owner as your repository**. Name the table **Backlog**. In your private repository, open **Projects → Link a project** and select it.
+1. For a personally owned repository, open your profile → **Your projects → New project → Table**. If the repository belongs to an approved organization, use **that organization's Projects tab → New project → Table** instead. Name the Project, keep its visibility **Private** in Project settings, and use the **same owner as your repository**. Name the table **Backlog**. In your private repository, open **Projects → Link a project** and select it. Keep Mona's issue and the Project in separate browser tabs.
 2. In your private repository's **Issues → New issue**, create **only two work issues**, using only the **Exact issue title** column below for their titles. Create both yourself **after Mona's exercise was opened**, keep both **open**, and add each to your Project using its **Projects** sidebar. These are native repository issues, not draft Project rows. Do not add Mona's exercise issue to the Project.
 
    | Work role      | Exact issue title                                   | Effort | Assignees  | Status      | Sprint   |
@@ -34,9 +34,9 @@ All participation uses the GitHub website in your browser.
    | Implementation | [Workshop] Publish the service release checklist    |      3 | Yourself   | In progress | Sprint 1 |
    | Verification   | [Workshop] Verify the release checklist in Sprint 2 |      2 | Unassigned | Todo        | Sprint 1 |
 
-3. In Backlog, use the column-header **+ → New field** to create **Effort**, type **Number**, and enter **3** and **2** as above. Assign implementation to yourself, leave verification **unassigned**, and set their **Status** values to **In progress** and **Todo** respectively.
-4. Create **Sprint**, type **Iteration**, starting this week with a **one-week** duration. In **… → Settings → Sprint**, name the first two consecutive, non-overlapping one-week iterations **Sprint 1** and **Sprint 2**. Reuse correctly typed fields rather than adding duplicates.
-5. Put **both issues in Sprint 1**. In view settings, choose **Group by → Sprint**, set **Field sum → Effort**, and **Save** the view. Check Sprint 1 totals **5**; this is relative size, not available working hours.
+3. In Backlog, select the rightmost column-header **+ (Add field) → Add field** (older layouts say **New field**) to open **Create a project field**. Create **Effort**, type **Number**, and enter **3** and **2** as above. Assign implementation to yourself, leave verification **unassigned**, and set their **Status** values to **In progress** and **Todo** respectively.
+4. Create **Sprint**, type **Iteration**. Set **Starts on** to today or your agreed sprint start this week, and explicitly choose a **one-week** duration. In **… → Settings → Sprint**, name the first two consecutive, non-overlapping one-week iterations **Sprint 1** and **Sprint 2**. Check their displayed start/end dates: each covers seven days; Sprint 2 starts the day after Sprint 1 ends. Do not assume a Monday start or copy screenshot dates. Reuse correctly typed fields rather than adding duplicates.
+5. Put **both issues in Sprint 1**. In view settings, choose **Group by → Sprint** and **Field sum → Effort**. This menu is multi-select: clear **Count** if selected so you read effort rather than the number of items. **Save** the view. Check Sprint 1 shows **Effort 5** (3 + 2), not Count 2; this is relative size, not available working hours.
 
 **Expected result:** one private Project linked to your private repository, exactly two manually created work issues, and a saved Sprint 1 group with total Effort **5**.
 
@@ -93,14 +93,14 @@ _Navigation reference: this issue overview locates the sidebar; it does not disp
 - [x] Publish the service release checklist
 ```
 
-3. Select **Commit changes**. In the dialog, choose **Commit directly to the workshop/release-checklist branch**, not main, and confirm. Do not change any other file or Mona's saved progress.
+3. Open **Preview changes**: only the first checkbox should change from `[ ]` to `[x]`, one removed line and one added line. Do not paste the example as an extra line or replace the whole document. Select **Commit changes**. In the dialog, choose **Commit directly to the workshop/release-checklist branch**, not main, and confirm. Do not change any other file or Mona's saved progress.
 4. Select **Compare & pull request**. Set **base: main**, **compare: workshop/release-checklist**, and title **Publish the service release checklist**. Use the closing line below in the body. Mona's step comment fills in the actual implementation issue number; when reading the source guide, use your own implementation number instead of unresolved braces:
 
 ```text
 Closes #{{ISSUE_implementation}}
 ```
 
-5. Create the PR and confirm its **Development** relationship points to implementation. Inspect **Files changed**: only the checklist file may differ. **Keep the PR open until Mona confirms Step 2-3 passed and posts Step 4.** Do not close implementation manually or change the checked PR head after it passes.
+5. Create the PR and confirm its **Development** relationship points to implementation. Inspect **Files changed**: exactly one file, with only the first checkbox changed and the second still unchecked. **Keep the PR open until Mona confirms Step 2-3 passed and posts Step 4.** Green quality checks do not replace that Mona pass. Do not close implementation manually or change the checked PR head after it passes.
 
 **Expected result:** an open PR, from the exact work branch into main in your own repository, with the single checked line and a native closing relationship to the actual implementation issue.
 
@@ -116,6 +116,8 @@ _Navigation reference: this inherited overview locates PR entry points, not ever
 
 **REPOSITORY-VERIFIED:** Mona checks author, same-repository head/base, exact branch, the native closing relationship, the only changed file and the required checked line. It does not award independent review or approval.
 
+**If blocked:** correct a specific failed-work message and post a fresh check. If the Mona Actions run instead says repository evidence could not be read, use **Re-run jobs → Re-run failed jobs** once. If it fails again, stop and give the maintainer the run URL and exact error. Keep this PR open and preserve its head; do not recreate it, edit bot progress, change permissions or add an access token.
+
 ## Step 4 — Complete and carry over
 
 **Time: 8 minutes · Topic: merge traceability, built-in automation and unfinished work**
@@ -126,7 +128,7 @@ _Navigation reference: this inherited overview locates PR entry points, not ever
 
 **Do:**
 
-- Only after Mona's Step 2-3 pass, open your Project **… → Workflows** and enable **Item closed → Status: Done**. Return to the same PR, inspect **Files changed**, and wait for the required **content verification and test checks** to pass. Do not alter the checked head.
+- Only after Mona's Step 2-3 pass, open your Project **… → Workflows** and confirm **Item closed → Status: Done** is **On**; enable it only if it is Off. Return to the same PR, inspect **Files changed**, and wait for the required **content verification and test checks** to pass. Do not alter the checked head.
 - Select **Merge pull request → Confirm merge**, or the permitted squash option, into **main**. No approval is required in the personal sandbox; this is **not independent review or self-approval**. Respect inherited organizational protections rather than disabling them.
 - Confirm implementation closed as completed and its Project item becomes **Done**. Keep implementation in **Sprint 1**. Keep verification **open**, move only its Sprint value to **Sprint 2**, and save any view changes.
 
@@ -144,6 +146,8 @@ _Navigation reference: the overview shows entry points, not proof of your own me
 
 **MIXED EVIDENCE:** Mona verifies the same checked PR/head, merge, issue closure and open verification. You self-confirm Project Done and Sprint 2 carry-over. It closes only this standalone exercise issue, not verification.
 
+**If blocked after merging:** if GitHub already shows **Merged** but Mona reports missing merge metadata or unavailable repository evidence, preserve that merge. Rerun the failed Mona Actions job once; if the same error returns, stop and report the run URL and exact error. Do not recreate or reopen the PR or use `/done` to bypass this check.
+
 ## Troubleshooting and evidence FAQ
 
 - **Which path should I use?** All-three-lab attendees follow the existing Lab 1 Mona comments without another copy or repeated setup. Standalone learners use only this Lab 2 template and its single exercise. `/status` and `/help` are safe in the active private exercise.
@@ -153,6 +157,8 @@ _Navigation reference: the overview shows entry points, not proof of your own me
 - **Dependency check fails:** use the verification issue's native Relationships menu, select implementation in the same repository and retry `/check 2-2`. A written issue link is insufficient; API failures earn no progress.
 - **Work branch already exists:** inspect that branch and any existing PR in the browser. Preserve your work and resume only if the base and one-file change are correct; do not edit main or delete work to bypass a check.
 - **PR check fails:** keep the PR open, use the actual PR and implementation numbers, exact branch and one-file diff, correct the displayed problem, and submit a fresh check. Do not merge before Step 2-3 passes or alter its head afterward.
+- **Actions cannot read complete native repository evidence:** this is a checker/API read failure, not proof the PR is wrong. Rerun the failed Mona job once; if it fails again, stop and report its run URL and exact error. Preserve the same PR, whether still open or already merged. Source-template fixes do not update existing private copies automatically; do not reset progress, recreate the PR or add an access token.
+- **Sprint totals show 2 instead of 5:** **Field sum** is multi-select. Select Effort and clear Count if you want only the effort sum; verify numeric values 3 and 2, both in Sprint 1, then save. Check the actual iteration dates in settings rather than assuming a Monday start.
 - **A reviewer is required:** that managed environment has an extra prerequisite. Respect the policy and obtain its authorized review; do not call author self-inspection an approval or disable protections.
 - **Done did not update:** inspect Item closed automation and the Project card yourself. A successful repository check is not evidence that Mona read a Project field.
 

@@ -47,6 +47,46 @@ const pinnedMona = pinWorkflow(
   'a'.repeat(40),
 );
 
+unit('manual-run setup names real field controls, iteration dates and effort totals', () => {
+  const setup = stepSections(guide)[0].text.replace(/[*`]/g, '');
+  for (const text of [
+    "that organization's Projects tab",
+    'separate browser tabs',
+    'Create a project field',
+    'Starts on',
+    'displayed start/end dates',
+    'seven days',
+    'multi-select',
+    'clear Count',
+    'Effort 5',
+  ])
+    assert.ok(setup.includes(text), `Missing manual-run guidance: ${text}`);
+});
+
+unit('PR steps distinguish learner corrections from read failures without recreating work', () => {
+  const steps = stepSections(guide);
+  const pr = steps[2].text.replace(/[*`]/g, '');
+  for (const text of [
+    'Preview changes',
+    'one removed line and one added line',
+    'second still unchecked',
+    'Green quality checks do not replace',
+    'Re-run jobs',
+    'run URL and exact error',
+    'Keep this PR open',
+    'do not recreate it',
+  ])
+    assert.ok(pr.includes(text), `Missing PR recovery guidance: ${text}`);
+  const merge = steps[3].text.replace(/[*`]/g, '');
+  for (const text of [
+    'enable it only if it is Off',
+    'already shows Merged',
+    'preserve that merge',
+    'Do not recreate or reopen the PR',
+  ])
+    assert.ok(merge.includes(text), `Missing merge recovery guidance: ${text}`);
+});
+
 // Select only "^unit: " while the parent is finalizing the immutable runtime pin.
 // This integration test must fail closed in publication CI until that pin is real.
 test('integration: complete standalone publication satisfies the offline contract', () => {
